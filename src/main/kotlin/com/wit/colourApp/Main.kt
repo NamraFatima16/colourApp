@@ -46,6 +46,14 @@ fun main(args: Array<String>){
     //    ...
     //    Colour: Silver
 
-    //TODO for the three additional functions you wrote in Colours.kt, print the returned value here.
+    // for the three additional functions you wrote in Colours.kt, print the returned value here.
+
+    println("lowercase list is: ${colours.coloursInAllLowerCase()}")
+
+    println("${colours.coloursWithMoreCharsThan(4)} have more than 4 chars")
+
+    println("Reverse sorted list is:${colours.coloursInReverseAplhabeticOrder()}")
+
+
 
 }
