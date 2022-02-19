@@ -50,7 +50,7 @@ class Colours {
     }
 
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
-        //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
+        // return the colours that have exactly the same number of chars as the number passed as a parameter
         val sizeC = mutableListOf<String>()
         for(szColour in colours){
             if (szColour.length == size){
@@ -63,9 +63,19 @@ class Colours {
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
-        //TODO return the colours that have less chars than the number passed as s parameter
-        return listOf("this should return colours less than ${size} chars")
+        //  return the colours that have less chars than the number passed as s parameter
+        val sizeLs = mutableListOf<String>()
+        for(szColour in colours){
+            if (szColour.length < size){
+                sizeLs.add(szColour)
+            }
+
+        }
+        return sizeLs
+
     }
+
+
 
     fun isColourInTheList(colour : String) : Boolean{
         //TODO return true of the colour passed as a parameter is in the list and false otherwise
