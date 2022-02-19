@@ -37,13 +37,22 @@ class Colours {
     }
 
     fun coloursStartingWithLetter(letter: Char) : List<String>{
-        //TODO return the colours starting with the letter passed as a parameter
-        return listOf("this should return colours that start with ${letter}")
+        // return the colours starting with the letter passed as a parameter
+        val stringC = mutableListOf<String>()
+        for (strColour in colours ){
+            if(strColour.startsWith(letter,true)) {
+
+                stringC.add(strColour)
+            }
+
+        }
+        return stringC
     }
 
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
         //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
         return listOf("this should return colours that have ${size} chars")
+
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
