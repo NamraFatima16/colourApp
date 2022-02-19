@@ -15,8 +15,8 @@ class Colours {
     }
 
     fun firstColour() : String{
-        //TODO return the first colour in the list
-        return "this should return the first colour in the list"
+        // return the first colour in the list
+        return colours.first()
     }
 
     fun lastColour() : String{
