@@ -40,11 +40,14 @@ fun main(args: Array<String>){
     println("True or false, is blue in the list: ${colours.isColourInTheList("blue")} ")
 
     println("The list of colours, each printed on a new line is:")
-    //TODO Write Code here (below this comment) to print the list in this format:
+    //  Write Code here (below this comment) to print the list in this format:
     //    Colour: Red
     //    Colour: Orange
     //    ...
     //    Colour: Silver
+    for(colour in colours.getAll()){
+        println("Colour: $colour")
+    }
 
     // for the three additional functions you wrote in Colours.kt, print the returned value here.
 
