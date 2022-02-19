@@ -51,7 +51,14 @@ class Colours {
 
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
         //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
-        return listOf("this should return colours that have ${size} chars")
+        val sizeC = mutableListOf<String>()
+        for(szColour in colours){
+            if (szColour.length == size){
+                sizeC.add(szColour)
+            }
+
+        }
+        return sizeC
 
     }
 
