@@ -78,7 +78,7 @@ class Colours {
 
 
     fun isColourInTheList(colour : String) : Boolean{
-        //TODO return true of the colour passed as a parameter is in the list and false otherwise
+        // return true of the colour passed as a parameter is in the list and false otherwise
         // Note: the search should be case insensitive - if blue is passed as a parameter it should find Blue, BLUE etc.
         for(str in colours){
             if(str.equals(colour,true)){
@@ -88,7 +88,35 @@ class Colours {
         return false
     }
 
-    //TODO Write THREE additional functions of your choice that will perform some sort of
+    // Write THREE additional functions of your choice that will perform some sort of
     // analysis on the colours list.
+
+
+     fun coloursInAllLowerCase() : List<String>{
+      // return the colours in ALL Lower CASE
+       //found from there
+     //https://kotlinlang.org/docs/collection-transformations.html
+       return colours.map { it.lowercase() }
+    }
+
+    fun coloursWithMoreCharsThan(size: Int) : List<String>{
+        //  return the colours that have more chars than the number passed as s parameter
+        val sizeLs = mutableListOf<String>()
+        for(szColour in colours){
+            if (szColour.length > size){
+                sizeLs.add(szColour)
+            }
+
+        }
+        return sizeLs
+
+    }
+
+    fun coloursInReverseAplhabeticOrder() : List<String>{
+        // return the colours in reverse alphabetical order
+        return  colours.sorted().reversed()
+    }
+
+
 
 }
