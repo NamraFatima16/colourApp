@@ -11,14 +11,15 @@
 //     a lower grade for the assignment as it is a software development tooling module.
 //  5. NOTE that you should not change the function names, parameters or return types when working on the fixes - to
 //     do so will also result in a reduced mark.
-package com.wit.colourApp;
-private val colours = Colours();
+package com.wit.colourApp
 
-fun main(args: Array<String>){
+private val colours = Colours()
+
+fun main(args: Array<String>) {
 
     // Use String templates i.e. ${} to insert the method calls into the actual println string.
     // tidy up the printing layout so that it is neat and has a nicer UI - you can choose what you would like to do
-    //     here, maybe add breaks, lines, tabs, dividers, etc, whatever you think for making it nicer / easier to read.
+    //     here, maybe add breaks, lines, tabs, dividers, etc., whatever you think for making it nicer / easier to read.
     println("----------------------------------------------------------------------------------------------------")
     println("1. The list is:\n\t${colours.getAll()}")
     println("----------------------------------------------------------------------------------------------------")
@@ -28,15 +29,19 @@ fun main(args: Array<String>){
     println("----------------------------------------------------------------------------------------------------")
     println("4. ${colours.lastColour()} is the last colour in the list")
     println("----------------------------------------------------------------------------------------------------")
-    println("5. Sorted list is:\n\t${colours.coloursInAplhabeticOrder()}")
+    println("5. Sorted list is:\n\t${colours.coloursInAlphabeticOrder()}")
     println("----------------------------------------------------------------------------------------------------")
     println("6. CAPITALISED list is:\n\t${colours.coloursInAllCapitals()}")
     println("----------------------------------------------------------------------------------------------------")
-    println("7. Colours starting with specific letter [ B was chosen ]" +
-            "\n\t${colours.coloursStartingWithLetter('B')}")
+    println(
+        "7. Colours starting with specific letter [ B was chosen ]" +
+                "\n\t${colours.coloursStartingWithLetter('B')}"
+    )
     println("----------------------------------------------------------------------------------------------------")
-    println("8. Colours with a specific number of chars [ 6 was chosen]" +
-            "\n\t${colours.coloursWithSpecificNumberOfChars(6)}")
+    println(
+        "8. Colours with a specific number of chars [ 6 was chosen]" +
+                "\n\t${colours.coloursWithSpecificNumberOfChars(6)}"
+    )
     println("----------------------------------------------------------------------------------------------------")
     println("9. The following colours have less than 6 chars\n\t${colours.coloursWithLessCharsThan(6)}")
     println("----------------------------------------------------------------------------------------------------")
@@ -48,7 +53,7 @@ fun main(args: Array<String>){
     //    Colour: Orange
     //    ...
     //    Colour: Silver
-    for(colour in colours.getAll()){
+    for (colour in colours.getAll()) {
         println("Colour: $colour")
     }
     println("----------------------------------------------------------------------------------------------------")
@@ -57,7 +62,7 @@ fun main(args: Array<String>){
     println("----------------------------------------------------------------------------------------------------")
     println("13. The following colours have more than 4 chars\n\t${colours.coloursWithMoreCharsThan(4)}")
     println("----------------------------------------------------------------------------------------------------")
-    println("14. Reverse sorted list is:\n\t${colours.coloursInReverseAplhabeticOrder()}")
+    println("14. Reverse sorted list is:\n\t${colours.coloursInReverseAlphabeticOrder()}")
     println("----------------------------------------------------------------------------------------------------")
 
 }
